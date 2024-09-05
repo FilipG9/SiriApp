@@ -1,0 +1,208 @@
+/* Impostazioni generali */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Container principale */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Navigazione della settimana */
+.week-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#prev-week, #next-week {
+    background-color: #078474;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#prev-week:hover, #next-week:hover {
+    background-color: #056b63;
+}
+
+#current-week {
+    font-size: 1.2rem;
+    padding: 5px
+}
+
+/* Tabella calendario */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Assicura che i bordi della tabella e delle celle siano uniti */
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #078474;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd; /* Aggiunge bordi ai titoli delle colonne */
+    border-radius: 5px 5px 0 0;
+}
+.free {
+    background-color: white;
+}
+
+.occupied {
+    background-color: #f8d7da; /* Colore per indicare che l'appuntamento è occupato */
+    color: #721c24;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd; /* Aggiunge bordi alle celle */
+    border-top: none;
+}
+table, th, td {
+    border: 1px solid black;
+}
+
+tbody td:not(:first-child) {
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+tbody td:not(:first-child):hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+}
+
+tbody td.free {
+    background-color: white;
+}
+
+tbody td.occupied {
+    background-color: #078474;
+    color: white;
+}
+
+tbody td.occupied:hover {
+    background-color: #056b63;
+}
+
+
+tbody td:not(:first-child) {
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+tbody td:not(:first-child):hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+}
+
+tbody td.free {
+    background-color: white;
+}
+
+tbody td.occupied {
+    background-color: #078474;
+    color: white;
+}
+
+tbody td.occupied:hover {
+    background-color: #056b63;
+}
+
+/* Modale per la gestione degli appuntamenti */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+.modal label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.modal input[type="text"],
+.modal input[type="date"],
+.modal input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal button {
+    background-color: #078474;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #056b63;
+}
+
+.modal .delete-btn {
+    background-color: #e74c3c;
+}
+
+.modal .delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.modal .close-btn {
+    background-color: #95a5a6;
+}
+
+.modal .close-btn:hover {
+    background-color: #7f8c8d;
+}

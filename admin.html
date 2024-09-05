@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario - Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calendario - Amministrazione</h1>
+        <div class="week-navigation">
+            <button id="prev-week">Settimana Precedente</button>
+            <span id="current-week"></span> <!-- ID deve essere corretto -->
+            <button id="next-week">Settimana Successiva</button>
+        </div>
+        <div class="calendar">
+            <table>
+                <thead id="calendar-header"></thead>
+                <tbody id="calendar-body"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <h2>Nuovo Appuntamento</h2>
+        <form id="appointment-form">
+            <label for="patientName">Nome Paziente:</label>
+            <input type="text" id="patientName" name="patientName" required>
+            <label for="note">Note:</label>
+            <input type="text" id="note" name="note">
+            <button type="submit">Salva</button>
+            <button type="button" class="close-btn">Chiudi</button>
+        </form>
+    </div>
+    <script src="admin-script.js"></script> <!-- Assicurati che il nome sia corretto -->
+</body>
+</html>
